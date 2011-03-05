@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution Plack-Middleware-XFrameOptions-All,
-version 0.1:
+version 0.1.1:
 
   Plack middleware to set X-Frame-Options.
 

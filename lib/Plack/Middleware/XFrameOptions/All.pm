@@ -2,7 +2,7 @@
 
 package Plack::Middleware::XFrameOptions::All;
 BEGIN {
-  $Plack::Middleware::XFrameOptions::All::VERSION = '0.1';
+  $Plack::Middleware::XFrameOptions::All::VERSION = '0.1.1';
 }
 
 use strict;
@@ -14,7 +14,7 @@ Plack::Middleware::XFrameOptions::All - Plack middleware to set X-Frame-Options.
 
 =head1 VERSION
 
-version 0.1
+version 0.1.1
 
 =head1 DESCRIPTION
 

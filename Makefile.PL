@@ -19,8 +19,10 @@ my %WriteMakefileArgs = (
   'EXE_FILES' => [],
   'LICENSE' => 'bsd',
   'NAME' => 'Plack::Middleware::XFrameOptions::All',
-  'PREREQ_PM' => {},
-  'VERSION' => '0.1',
+  'PREREQ_PM' => {
+    'Plack' => '0'
+  },
+  'VERSION' => '0.1.1',
   'test' => {
     'TESTS' => 't/*.t'
   }
