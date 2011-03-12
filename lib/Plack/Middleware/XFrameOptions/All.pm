@@ -2,7 +2,7 @@
 
 package Plack::Middleware::XFrameOptions::All;
 BEGIN {
-  $Plack::Middleware::XFrameOptions::All::VERSION = '0.1.1';
+  $Plack::Middleware::XFrameOptions::All::VERSION = '0.2';
 }
 
 use strict;
@@ -14,7 +14,7 @@ Plack::Middleware::XFrameOptions::All - Plack middleware to set X-Frame-Options.
 
 =head1 VERSION
 
-version 0.1.1
+version 0.2
 
 =head1 DESCRIPTION
 
@@ -45,7 +45,8 @@ sub call {
 	my $h = Plack::Util::headers($res->[1]);
 
 	# Only process text/html.
-	return unless $h->get('Content-Type') =~ qr{text/html};
+	my $ct = $h->get('Content-Type') or return;
+	return unless $ct =~ qr{text/html};
 
 	$h->set('X-Frame-Options', $self->policy);
     });

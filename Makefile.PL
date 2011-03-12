@@ -11,18 +11,25 @@ use ExtUtils::MakeMaker 6.31;
 my %WriteMakefileArgs = (
   'ABSTRACT' => 'Plack middleware to set X-Frame-Options.',
   'AUTHOR' => 'Gea-Suan Lin <gslin@gslin.org>',
-  'BUILD_REQUIRES' => {},
+  'BUILD_REQUIRES' => {
+    'Module::Build' => '0.3601',
+    'Test::More' => '0'
+  },
   'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+    'ExtUtils::MakeMaker' => '6.31',
+    'Module::Build' => '0.3601'
   },
   'DISTNAME' => 'Plack-Middleware-XFrameOptions-All',
   'EXE_FILES' => [],
   'LICENSE' => 'bsd',
   'NAME' => 'Plack::Middleware::XFrameOptions::All',
   'PREREQ_PM' => {
-    'Plack' => '0'
+    'Plack::Middleware' => '0',
+    'Plack::Util' => '0',
+    'Plack::Util::Accessor' => '0',
+    'parent' => '0'
   },
-  'VERSION' => '0.1.1',
+  'VERSION' => '0.2',
   'test' => {
     'TESTS' => 't/*.t'
   }
